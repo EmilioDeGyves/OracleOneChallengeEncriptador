@@ -1,0 +1,51 @@
+<!--código Hecho Por Emilio De Gyves García-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="flex-container">
+        <section class="Logo">
+            <intput class="Logo__Computadora" type="button" value="Menu--Cerrado">
+                <img src="Logo.png" alt="Logo">
+            </intput>
+            <intput class="Logo__Movil" type="button" value="Menu--Cerrado">
+                <img src="Logo-Moviles.png" alt="Logo">
+            </intput>
+        </section>
+        <section class="campoInput">
+            <textarea class="campoInput__textArea" name="texto" id="texto" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="textoAdvertencia">
+                <img class="textoAdvertencia__Icon" src="Warning-Icon.png" alt="Warning-Icon">
+                <p id="advertencia" class="textoAdvertencia__Text">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="Buttons">
+                <input class="campoInput__button--encriptar" type="button" value="Encriptar" onclick=encryptText()>
+                <input class="campoInput__button--desencriptar" type="button" value="Desencriptar" onclick=unEncryptText()>
+            </div>
+        </section>
+        <section class="campoOutput ">
+
+            <div class="sinOutput --active">
+                <img class="sinOutput__imagen" src="Muñeco.png" alt="Muñeco">
+                <h3 class="sinOutput__titulo">Ningún mensaje fue encontrado</h3>
+                <p class="sinOutput__mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <div class="conOutput ">
+                <p id="mensaje" class="conOutput__mensaje"></p>
+                <input class="conOutput__button--copiar" type="button" value="Copiar" onclick=copiarTexto()>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

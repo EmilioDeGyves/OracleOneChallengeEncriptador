@@ -1,0 +1,307 @@
+/*código Hecho Por Emilio De Gyves García*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    background-color: #F3F5FC;
+}
+
+/*Modo Telefono*/
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100vh;
+}
+
+.Logo .Logo__Computadora{
+    display:none;
+}
+
+.Logo{
+    width: 100%;
+    margin: 24px 0;
+    padding: 0 16px;
+}
+
+.campoInput{
+    width: 100%;
+    margin: 24px 0;
+    padding: 0 16px;
+    align-items: space-around;
+}
+.campoInput .campoInput__textArea {
+    margin-top: 32px;
+    width: 100%;
+    height: 30vh;
+    border: 0;
+    background-color: transparent;
+    text-align: start; 
+    color: #0A3871;
+    font-size: 32px;
+    overflow: auto; 
+    resize: none;
+}
+
+.campoInput .campoInput__textArea:focus {
+    border: none;
+    outline: none; 
+}
+
+.campoInput .campoInput__textArea::placeholder{
+    color: #0A3871;
+    font-size: 32px;
+}
+
+.textoAdvertencia{
+    display:flex;
+}
+
+.textoAdvertencia .textoAdvertencia__Icon{
+    height: 16px;
+    width: 16px;
+}
+
+.textoAdvertencia .textoAdvertencia__Text{
+    color: #495057;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.Buttons{
+    display:flex;
+    flex-direction: column;
+    margin: 24px 0; 
+}
+
+.Buttons .campoInput__button--encriptar{
+    background-color: #0A3871;
+    height: 67px;
+    border-radius: 24px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.Buttons .campoInput__button--desencriptar{
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    font-weight: 400;
+}
+
+.Buttons .campoInput__button--desencriptar:hover{
+    background-color: #EFF1FA;
+}
+
+.Buttons .campoInput__button--encriptar:hover{
+    background-color: #072861;
+}
+
+.sinOutput .sinOutput__imagen, .conOutput__button--copiar, .conOutput__mensaje, .sinOutput .sinOutput__imagen, .sinOutput .sinOutput__mensaje, .sinOutput .sinOutput__titulo{
+    display: none;
+}
+
+.--active{
+    display: flex;
+    background-color: white;
+    width: calc(100% - 32px);
+    margin: 24px 16px;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 32px;
+    text-align: center;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    
+}
+
+.sinOutput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.conOutput {
+    display: none;
+}
+
+.conOutput.--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.conOutput.--active .conOutput__mensaje {
+    order: 1;
+}
+
+.conOutput.--active .conOutput__button--copiar {
+    order: 2;
+    margin-top: auto;
+}
+
+
+.sinOutput.--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.--active .sinOutput__titulo{
+    display:inline-block;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.--active .sinOutput__mensaje{
+    display:inline-block;
+    background-color: transparent;
+    color: #495057;
+}
+
+.--active .conOutput__mensaje{
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    color: #495057;
+    padding-bottom: 30px;
+}
+
+.--active .conOutput__button--copiar{
+    display:inline-block;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    font-weight: 400;
+    height: 67px;
+    align-self: flex-end;
+}
+.--active .conOutput__button--copiar:hover{
+    display:inline-block;
+    width: 100%;
+    background-color: #EFF1FA;
+    border-radius: 24px;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+    font-weight: 400;
+    height: 67px;
+    align-self: flex-end;
+}
+/*Modo Tableta*/
+
+@media screen and (min-width: 768px) {
+    
+    .campoInput .campoInput__textArea {
+        margin-top: 0;
+        width: 100%;
+        height: 50vh;
+    }
+
+    .Buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 8px;
+        flex: 1 0 0;
+    }
+
+    .Buttons .campoInput__button--encriptar{
+        width: 100%;
+        background-color: #0A3871;
+        height: 67px;
+        border-radius: 24px;
+        border: none;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+
+    .Buttons .campoInput__button--desencriptar{
+        width: 100%;
+        height: 67px;
+        border-radius: 24px;
+        border: 1px solid #0A3871;
+        color: #0A3871;
+        font-weight: 400;
+    }
+}
+
+/*Modo Computadora*/
+@media screen and (min-width: 1440px ){
+    
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            height: 100vh;
+        }
+
+        .Logo .Logo__Computadora{
+            width: auto;
+            display:block;
+        }
+
+        .Logo .Logo__Movil{
+            display:none;
+        }
+    
+        .Logo{
+            width: auto;
+            margin: 40px;
+            padding: 0 ;
+        }
+
+        .campoInput{
+            margin-top: 168px;
+            padding: 0 40px;
+        }
+        .campoInput .campoInput__textArea{
+            height: 65vh;
+        }
+
+        .campoOutput{
+            width: 30%;
+            padding: 0;
+            margin:30px;
+        }
+        .--active .conOutput__mensaje{
+            display: inline-block;
+            width: 336px;
+            background-color: transparent;
+            color: #495057;
+        }
+        
+        .campoOutput .--active{
+            height: 85vh;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            
+            justify-content: center;
+            align-items: center;
+        }
+
+        .--active .sinOutput__imagen{
+            display: inline-block;
+            background-color: transparent;
+            margin-bottom: 32px;
+        }
+
+        
+}
